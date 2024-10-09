@@ -873,7 +873,7 @@
                     </div>
                     <div class="d-flex flex-column">
                       <p>
-                        Type a user name and password to log on to UIUCTF 2023.
+                        Rentrez votre pseudo ainsi que votre mot de passe pour vous identifier.
                       </p>
                       <div class="row">
                         <div class="col-4">
@@ -895,18 +895,13 @@
                           </div>
                         </div>
                       </div>
-                      <div>
-                        <a class="font-xsmall" href="#" @click="desktop.createResetPasswordPane(); event.stopPropagation();">
-                          Forgot your password?
-                        </a>
-                      </div>
                     </div>
                     <div class="d-flex flex-column pl-4">
                       <button class="btn btn-sm btn-block btn-primary" name="_submit" value="Submit">
                         <span class="btn-text">OK</span>
                       </button>
                       <button class="btn btn-sm btn-block btn-primary" disabled>
-                        <span class="btn-text">Cancel</span>
+                        <span class="btn-text">Annuler</span>
                       </button>
                     </div>
                   </div>
@@ -916,7 +911,7 @@
               `;
               this.createPane({
                 name: "login",
-                title: "Welcome to UIUCTF 2023",
+                title: "Bienvenue au HackHer 2024",
                 recreate: `createLoginPane`,
                 taskbar_title: "Log In",
                 initial_body_elem: elem,
@@ -933,24 +928,24 @@
             createInfoPane(params) {
               const elem = `
               <div class="d-flex flex-column h-100 w-100 overflow-hidden" x-data="{selected: 'about'}">
-                <h5>Welcome to <b>UIUCTF 2023</b></h5>
+                <h5>Bienvenue au <b>HackHer 2024</b></h5>
                 <div class="d-flex flex-row w-100 mt-3" style="height: calc(100% - 2.75rem);">
                   <div class="info-panel d-flex flex-column flex-grow-1 p-3 overflow-auto">
                     <template x-if="selected == 'about'">
                       <div>
                         <div class="d-flex flex-row align-items-center">
                           <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/tip.png" alt="">
-                          <p class="font-weight-bold ml-2 mt-2">Did you know...</p>
+                          <p class="font-weight-bold ml-2 mt-2">Le saviez vous ?...</p>
                         </div>
-                        <p>We have a <a href="https://discord.gg/PytGqjq" target="_blank" rel="noopener noreferrer"> Discord server!</a></p>
-                        <p>Click Start > Log in... to get started.</p>
-                        <p>If you do not like this theme (or need a more accessible version), you can use the stock CTFd theme <a href="/challenges" target="_blank" rel="noopener noreferrer">here</a>.</p>
+                        <p>Nous avons un <a href="https://discord.gg/PytGqjq" target="_blank" rel="noopener noreferrer"> Discord !</a></p>
+                        <p>Cliquez sur Démarer > S'identifier... pour commencer le CTF.</p>
+                        <p>Si vous avez du mal avec ce thème, vous pouvez utiliser le thème par défaut <a href="/challenges" target="_blank" rel="noopener noreferrer">ici</a>.</p>
                       </div>
                     </template>
                     <template x-if="selected == 'when'">
                       <div>
                         <p>
-                          UIUCTF 2023 will be held Sat, 01 July 2023, 00:00 UTC — Mon, 03 July 2023, 00:00 UTC.
+                          Le HackHer 2024 se tiendra le Samedi 19 Octobre 2024, 10:00 — Samedi 19 Octobre 2024, 18:00.
                         </p>
                         <!-- https://codepen.io/harsh/pen/KKdEVPV -->
                         <div x-data="timer()">
@@ -961,67 +956,43 @@
                     <template x-if="selected == 'prizes'">
                       <div>
                         <p>
-                          As Gill Bates once said, 5.736K ought to be enough for anybody.<br>
-                          That's why we are distributing exactly that much money!
+                          Car nous voulons récompenser l'effort...<br>
+                          Voilà quelques prix pour le podium !
                         </p>
                         <ul>
-                          <li>First Place - $2048</li>
-                          <li>Second Place - $1024</li>
-                          <li>Third Place - $512</li>
-                          <li>4th / 5th Place - $256</li>
-                          <li>6th - 10th Place - $128</li>
-                          <li>Writeup Prize Money - $1000</li>
+                          <li>Première Place - Flipper Zero & Abonnement HTB/pers</li>
+                          <li>Seconde Place - Abonnement HTB/pers</li>
+                          <li>Troisième Place - Abonnement HTB/pers</li>
                         </ul>
                       </div>
                     </template>
                     <template x-if="selected == 'sponsors'">
                       <div class="text-center">
                         <p>
-                          SIGPwny thanks its UIUCTF 2023 sponsors:
+                          L'évènement HackHer remercie ses Sponsors:
                         </p>
                         <div class="d-flex flex-column align-items-center">
                           <div class="col-6 mb-2">
-                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/battelle-blue.png" class="img-fluid" alt="">
+                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/oteria.png" class="img-fluid" alt="">
                           </div>
                           <div class="col-6 mb-2">
-                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/zellic2.png" class="img-fluid" alt="">
+                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/quarkslab.png" class="img-fluid" alt="">
                           </div>
                           <div class="col-6 mb-2">
-                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/trail-of-bits.png" class="img-fluid" alt="">
-                          </div>
-                          <div class="col-6 mb-2">
-                            <a href="https://davidan.dev"><img src="https://davidan.dev/logo.png" class="img-fluid" alt=""></a>
-                          </div>
-                          <div class="col-6 mb-2">
-                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/google-cloud.png" class="img-fluid" alt="">
-                            <p>Infra sponsored by <a href="https://goo.gle/ctfsponsorship" target="_blank" rel="noopener noreferrer">goo.gle/ctfsponsorship</a></p>
+                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/maya.png" class="img-fluid" alt="">
                           </div>
                         </div>
                       </div>
                     </template>
                     <template x-if="selected == 'team'">
                       <div class="d-flex flex-column">
-                        <p>Meet the UIUCTF 2023 Team!!</p>
+                        <p>La Team HackHer !</p>
                           <div
                             style="display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(64px, 96px));"
                             x-data="{people: [
-                              { name:'Pete Stenger', img:'https://avatars.githubusercontent.com/u/13869303', href:'https://github.com/reteps' },
-                              { name:'Richard Liu', img:'https://avatars.githubusercontent.com/u/9328196', href:'https://github.com/richyliu' },
-                              { name:'Hassam Uddin', img:'https://avatars.githubusercontent.com/u/13320947', href:'https://hassamuddin.com' },
-                              { name:'YiFei Zhu', img:'https://lh3.googleusercontent.com/a-/ACB-R5SiFvHe6qP5yi3wJVNMUQqolSc-SRIl_ncQvhC_', href:'https://github.com/zhuyifei1999' },
-                              { name:'kuilin', img:'https://kuilin.net/profile_upscaled.png', href:'https://kuilin.net/' },
-                              { name:'David An', img:'https://davidan.dev/dave.jpeg', href:'https://davidan.dev' },
-                              { name:'Ellie Popoca', img:'https://i.imgur.com/jVsQDUP.gif', href:'https://www.linkedin.com/in/elliepopoca' },
-                              { name:'Pomona Carrington-Hoekstra', img:'https://avatars.githubusercontent.com/u/86129353' },
-                              { name:'George Huebner', img:'https://avatars.githubusercontent.com/u/44840644', href:'https://github.com/Feyorsh' },
-                              { name:'Joseph Ravichandran', img:'https://i.imgur.com/XOk7y7X.jpg', href:'https://twitter.com/0xjprx' },
-                              { name:'Minh Duong', img:'https://avatars.githubusercontent.com/u/35712968', href:'https://whitehoodhacker.net/' },
-                              { name:'Anakin Dey', img:'https://avatars.githubusercontent.com/spamakin', href:'https://www.anakin-dey.com/' },
-                              { name:'Nitya Sunkad', img:'https://avatars.githubusercontent.com/u/52294194?v=4', href:'https://www.linkedin.com/in/nsunkad' },
-                              { name:'Anusha Ghosh', img:'https://avatars.githubusercontent.com/u/35054976' },
-                              { name:'Emma Hartman', img:'https://avatars.githubusercontent.com/u/52719328?v=4', href:'https://www.linkedin.com/in/eihart123' },
-                              { name:'Sam Ruggerio', img:'https://media.licdn.com/dms/image/D5603AQHi1x_LXb9WaA/profile-displayphoto-shrink_400_400/0/1663172147068?e=1693440000&v=beta&t=96uMvByEHL5ZwhdIiAH9aU7JIzGDjOk0GNr0xGGIx9g', href: 'https://surg.dev'},
-                              { name:'Ankur Sundara', img: 'https://media.discordapp.net/attachments/1124416266896158780/1124503045766652065/avatar.jpeg', href:'https://ankursundara.com/'}
+                              { name:'Rhenar (Hugo)', img:'https://avatars.githubusercontent.com/u/15929760', href:'https://github.com/rhenar0' },
+                              { name:'Blusomething (Joris)', img:'', href:'https://github.com/richyliu' },
+                              { name:'Othmane Erraji', img:'https://media.licdn.com/dms/image/v2/C4D03AQGXmFV6ioXb6g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517528483962?e=1733961600&v=beta&t=KdgnKjMy0ozuTItNpAPEH49R8nPpZ2xt91YIAOqm8U4', href:'https://www.linkedin.com/in/oerraji/' }
                             ]}"
                             x-init="people.sort((a, b) => 0.5 - Math.random())"
                           >
@@ -1039,28 +1010,28 @@
                   </div>
                   <div class="d-flex flex-column pl-2">
                     <button :class="\`btn btn-sm mb-1 btn-primary \${selected == 'about' ? 'border-dark' : ''}\`" type="button" @click="selected = 'about'">
-                      <span class="btn-text">About</span>
+                      <span class="btn-text">A Propos</span>
                     </button>
                     <button :class="\`btn btn-sm mb-1 btn-primary \${selected == 'when' ? 'border-dark' : ''}\`" type="button" @click="selected = 'when'">
-                      <span class="btn-text">When</span>
+                      <span class="btn-text">Quand</span>
                     </button>
                     <button :class="\`btn btn-sm mb-1 btn-primary \${selected == 'prizes' ? 'border-dark' : ''}\`" type="button" @click="selected = 'prizes'">
-                      <span class="btn-text">Prizes</span>
+                      <span class="btn-text">Prix</span>
                     </button>
                     <button :class="\`btn btn-sm mb-1 btn-primary \${selected == 'sponsors' ? 'border-dark' : ''}\`" type="button" @click="selected = 'sponsors'">
                       <span class="btn-text">Sponsors</span>
                     </button>
                     <button :class="\`btn btn-sm mb-1 btn-primary \${selected == 'team' ? 'border-dark' : ''}\`" type="button" @click="selected = 'team'">
-                      <span class="btn-text">Team</span>
+                      <span class="btn-text">Equipe</span>
                     </button>
                   </div>
                 </div>
               </div>`
               this.createPane({
                 name: "info",
-                title: "Information",
+                title: "Informations",
                 recreate: `createInfoPane`,
-                taskbar_title: "Information",
+                taskbar_title: "Informations",
                 initial_body_elem: elem,
                 icon_path: "/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/help_book_big-1.png",
                 width: "600px",
@@ -1081,7 +1052,7 @@
                     <div class="d-flex flex-row h-100">
                       <img src="/themes/uiuctf-2023-ctfd-theme/static/img/register-sidebar.jpg">
                       <div class="d-flex flex-column flex-grow-1 px-3 py-2">
-                        <p>Enter the basic information for the new user.</p>
+                        <p>Entrez vos informations de connexion pour créer un utilisateur.</p>
                         <div class="row my-1">
                           <div class="col-3">
                             <span>{{ form.name.label(class="form-label") }}</span>
@@ -1091,7 +1062,7 @@
                               {{ form.name(class="form-control", value=name) }}
                             </div>
                             <small class="font-xsmall text-muted">
-                              Your username on the site
+                              Votre pseudo sur le site
                             </small>
                           </div>
                         </div>
@@ -1104,7 +1075,7 @@
                               {{ form.email(class="form-control", value=email) }}
                             </div>
                             <small class="font-xsmall text-muted">
-                              Never shown to the public
+                              N'est pas diffusé
                             </small>
                           </div>
                         </div>
@@ -1117,7 +1088,7 @@
                               {{ form.password(class="form-control", value=password) }}
                             </div>
                             <small class="font-xsmall text-muted">
-                              Password used to log into your account
+                              Mot de passe utiliser pour l'authentification
                             </small>
                           </div>
                         </div>
@@ -1129,17 +1100,17 @@
                             and <a href="{{ Configs.tos_link }}" rel="noopener" target="_blank">terms of service</a>
                           </p>
                         {% endif %}
-                        <p class="pt-4">To continue, click Next.</p>
+                        <p class="pt-4">Pour continuer, cliquez sur Suivant.</p>
                       </div>
                     </div>
                   </div>
                   <hr class="py-0 my-0">
                   <div class="d-flex flex-row justify-content-end py-2 px-2">
                     <button class="btn btn-sm btn-primary" disabled>
-                      <span class="btn-text">< Back</span>
+                      <span class="btn-text">< Retour</span>
                     </button>
                     <button class="btn btn-sm btn-primary" name="_submit" value="Submit">
-                      <span class="btn-text">Next ></span>
+                      <span class="btn-text">Suivant ></span>
                     </button>
                   </div>
                   {{ form.nonce() }}
@@ -1149,7 +1120,7 @@
 
               this.createPane({
                 name: "register",
-                title: "Register for UIUCTF 2023",
+                title: "S'enregistrer au HackHer",
                 taskbar_title: "Register",
                 recreate: `createRegisterPane`,
                 initial_body_elem: elem,
@@ -1219,7 +1190,7 @@
                     </div>
                   </div>
                 {% else %}
-                  <div> no scoreboard_standings </div>
+                  <div> Aucune équipe au Scoreboard ! </div>
                 {% endif %}
               {% endcache %}
               `
@@ -1245,11 +1216,6 @@
         class="nav-link active" id="settings-profile-tab" data-bs-toggle="pill"
         data-bs-target="#profile" role="tab"
     >Profile
-    </button>
-    <button
-        class="nav-link" id="settings-tokens-tab" data-bs-toggle="pill" data-bs-target="#tokens"
-        role="tab"
-    >Access Tokens
     </button>
   </div>
 </div>
@@ -1312,9 +1278,9 @@
                 class="alert alert-success alert-dismissible submit-row" role="alert"
                 x-cloak="success" x-show="success"
             >
-              <strong>Success!</strong>
-              Your profile has been updated
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+              <strong>Appliqué!</strong>
+              Votre profil vient d'être mis à jour.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fermer">
                 <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win95-pane-control/close.png" alt="">
                 <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win95-pane-control/close_pressed.png" alt="">
               </button>
@@ -1323,11 +1289,11 @@
 
             <template x-for="(msg, idx) in errors" :key="idx">
               <div class="alert alert-danger alert-dismissible" role="alert">
-                <span class="sr-only">Error:</span>
+                <span class="sr-only">Erreur:</span>
                 <span x-text="msg"></span>
                 <button
                     type="button" class="btn-close" data-bs-dismiss="alert"
-                    aria-label="Close"
+                    aria-label="Fermer"
                 >
                 <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win95-pane-control/close.png" alt="">
                 <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win95-pane-control/close_pressed.png" alt="">
@@ -1479,8 +1445,8 @@
 </div>`
               this.createPane({
                 name: "settings",
-                title: "Settings",
-                taskbar_title: "Settings",
+                title: "Paramètres",
+                taskbar_title: "Paramètres",
                 recreate: 'createSettingsPane',
                 initial_body_elem: elem,
                 icon_path: "/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/settings_gear-1.png",
@@ -1496,8 +1462,8 @@
             async createConfirmClosePane(params) {
               this.createPane({
                 name: "close",
-                title: "Confirm Close All",
-                taskbar_title: "Confirm Close All",
+                title: "Tout fermer ?",
+                taskbar_title: "Tout fermer ?",
                 initial_body_elem: `
                   <div class="d-flex flex-row user-select-none">
                     <div class="m-2">
@@ -1505,13 +1471,13 @@
                     </div>
                     <div class="m-2">
                       <p>
-                        Are you sure you want to close all panes?
+                        Voulez vous fermer toutes les fenêtres ?
                       </p>
                     </div>
                   </div>
                   <div class="d-flex flex-row justify-content-center">
                     <button class="btn btn-sm btn-primary" @click="desktop.closeAllPanes()">
-                      <span class="btn-text">OK</span>
+                      <span class="btn-text">Oui</span>
                     </button>
                   </div>
                 `,
@@ -1541,7 +1507,7 @@
                         <div class="min-vh-50 d-flex align-items-center">
                           <div class="text-center w-100">
                             <i class="fas fa-circle-notch fa-spin fa-3x fa-fw spinner"></i>
-                            <span class="sr-only">Loading...</span>
+                            <span class="sr-only">Chargement...</span>
                           </div>
                         </div>
                       </div>
@@ -1706,11 +1672,11 @@
 
     <div class="row">
       <div class="col-md-12">
-        <h3>Members</h3>
+        <h3>Membres</h3>
         <table class="table table-striped">
           <thead>
           <tr>
-            <td><b>User Name</b></td>
+            <td><b>Pseudo</b></td>
             <td><b>Score</b></td>
           </tr>
           </thead>
@@ -1732,14 +1698,14 @@
 
       <div class="row">
         <div class="col-md-12">
-          <h3>Solves</h3>
+          <h3>Résolus</h3>
           <table class="table table-striped">
             <thead>
             <tr>
               <td class="text-center"><b>Challenge</b></td>
-              <td class="d-none d-md-block d-lg-block"><b>Category</b></td>
-              <td><b>Value</b></td>
-              <td><b>Time</b></td>
+              <td class="d-none d-md-block d-lg-block"><b>Categorie</b></td>
+              <td><b>Valeur</b></td>
+              <td><b>Date</b></td>
             </tr>
             </thead>
             <tbody>
@@ -1783,7 +1749,7 @@
             <svg height="16" width="16">
               <circle cx="8" cy="8" r="5" fill="rgb(0, 209, 64)" />
             </svg>
-            <small x-text="\`Solves (\${getSolvePercentage()}%)\`"></small>
+            <small x-text="\`Résolus (\${getSolvePercentage()}%)\`"></small>
           </div>
           <div class="ps-2 float-start">
             <svg height="16" width="16">
@@ -1825,7 +1791,7 @@
       </div>
       <div class="row min-vh-25" x-show="solves?.data && solves.data.length === 0">
         <h3 class="opacity-50 text-center w-100 justify-content-center align-self-center">
-          No solves yet
+          Aucun résolu pour l'instant
         </h3>
       </div>
     </div>
@@ -1833,8 +1799,8 @@
 `
               this.createPane({
                 name: "team",
-                title: `Team Info`,
-                taskbar_title: `Team Info`,
+                title: `Informations Equipe`,
+                taskbar_title: `Informations Equipe`,
                 recreate: `createPublicTeamPane`,
                 PANE_TEAM_ID,
                 initial_body_elem: elem,
@@ -1897,7 +1863,7 @@
   {% include "components/errors.html" %}
     <div class="row">
       <div class="col-md-12">
-        <h3>Solves</h3>
+        <h3>Résolus</h3>
         <table class="table table-striped">
           <thead>
           <tr>
@@ -1948,7 +1914,7 @@
           <svg height="16" width="16">
             <circle cx="8" cy="8" r="5" fill="rgb(0, 209, 64)" />
           </svg>
-          <small x-text="\`Solves (\${getSolvePercentage()}%)\`"></small>
+          <small x-text="\`Résolus (\${getSolvePercentage()}%)\`"></small>
         </div>
         <div class="ps-2 float-start">
           <svg height="16" width="16">
@@ -1998,8 +1964,8 @@
 `
               this.createPane({
                 name: "user",
-                title: `User Info`,
-                taskbar_title: `User Info`,
+                title: `Informations utilisateur`,
+                taskbar_title: `Informations utilisateur`,
                 recreate: `createPublicUserPane`,
                 PANE_USER_ID,
                 initial_body_elem: elem,
@@ -2035,13 +2001,13 @@
                 this.closePanes('team_create')
                 this.closePanes('team')
                 if (statusCode === 403) {
-                  this.createAlertPane({"title": "Team Join Error","content": "Team Join form expired. Please try again."});
+                  this.createAlertPane({"title": "Erreur","content": "Merci de retenter..."});
                 } else {
-                  this.createAlertPane({"title": "Team Join Success", "type": "success", "content": "You successfully joined the team."})
+                  this.createAlertPane({"title": "Succès", "type": "success", "content": "Vous avez rejoins l'équipe."})
                 }
                 location.reload();
               } else {
-                this.createAlertPane({"title" : 'Team Join Error', "content": error });
+                this.createAlertPane({"title" : 'Erreur', "content": error });
               }
             }
 
@@ -2075,8 +2041,8 @@
               `
               this.createPane({
                 name: "team_join",
-                title: `Team Join`,
-                taskbar_title: `Team Join`,
+                title: `Rejoindre une équipe`,
+                taskbar_title: `Rejoindre une équipe`,
                 recreate: `createPrivateTeamJoinPane`,
                 initial_body_elem: elem,
                 icon_path: "/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/address_book_users.png",
@@ -2106,13 +2072,13 @@
                 this.closePanes('team')
                 this.closePanes('team_join')
                 if (statusCode === 403) {
-                  this.createAlertPane({"title": "Team Create Error","content": "Team Create form expired. Please try again."});
+                  this.createAlertPane({"title": "Erreur","content": "Merci de retenter."});
                 } else {
-                  this.createAlertPane({"title": "Team Create Success", "type": "success", "content": "You successfully created the team."})
+                  this.createAlertPane({"title": "Succès !", "type": "success", "content": "Vous avez créer votre équipe."})
                 }
                 location.reload();
               } else {
-                this.createAlertPane({"title" : 'Team Create Error', "content": error });
+                this.createAlertPane({"title" : 'Erreur', "content": error });
                 this.closePanes('team')
               }
             }
@@ -2138,8 +2104,7 @@
 
                     <div class="row ">
                       <div class="col-md-12">
-                        <p>After creating your team, share the team name and password with your teammates so they can join your
-                          team.</p>
+                        <p>Après avoir créer votre équipe, partagez son nom et son mot de passe à votre équipe !</p>
                         {{ form.submit(class="btn btn-success float-end px-4") }}
                       </div>
                     </div>
@@ -2151,8 +2116,8 @@
 
               this.createPane({
                 name: "team_create",
-                title: `Team Create`,
-                taskbar_title: `Team Create`,
+                title: `Créer une équipe`,
+                taskbar_title: `Créer une équipe`,
                 recreate: `createPrivateTeamCreatePane`,
                 initial_body_elem: elem,
                 icon_path: "/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/address_book_users.png",
@@ -2172,15 +2137,15 @@
               const elem = `
                   {% if privateteam_enrollment_needed %}
                       <p>
-                        Looks like you are not on a team yet. Please join or create a team.  
+                        Oh vous n'êtes pas dans une équipe. Rejoignez une équipe ou créer la votre. 
                       </p>
 
                 <div class="d-flex flex-row justify-content-center">
                   <div class="mt-3 pr-3">
-                    <a class="btn btn-primary" href="#" @click="desktop.createPrivateTeamJoinPane(); event.stopPropagation();">Join Team</a>
+                    <a class="btn btn-primary" href="#" @click="desktop.createPrivateTeamJoinPane(); event.stopPropagation();">Rejoindre une équipe</a>
                   </div>
                   <div class="mt-3 pl-3">
-                    <a class="btn btn-primary" href="#" @click="desktop.createPrivateTeamCreatePane(); event.stopPropagation();">Create Team</a>
+                    <a class="btn btn-primary" href="#" @click="desktop.createPrivateTeamCreatePane(); event.stopPropagation();">Créer une équipe</a>
                   </div>
               </div>
                 {% elif team != None %}
@@ -2236,17 +2201,17 @@
       </div>
       <div x-data="CaptainMenu">
         <button class="edit-team" @click="editTeam()">
-          Edit Team
+          Editer une équipe
         </button>
         <button class="edit-captain" @click="chooseCaptain()">
-          Choose Captain
+          Choisir un capitaine
         </button>
 
         <button class="invite-members" @click="inviteMembers()">
-          Invite Users
+          Inviter un joueur
         </button>
         <button class="disband-team" @click="disbandTeam()">
-          Disband Team
+          Supprimer l'équipe
         </button>
       </div>
 
@@ -2268,11 +2233,11 @@
     {% include "components/errors.html" %}
     <div class="row min-vh-25">
       <div class="col-md-12">
-        <h3>Members</h3>
+        <h3>Membres</h3>
         <table class="table table-striped">
           <thead>
           <tr>
-            <td><b>User Name</b></td>
+            <td><b>Pseudo</b></td>
             <td><b>Score</b></td>
           </tr>
           </thead>
@@ -2284,7 +2249,7 @@
                   {{ member.name }}
                 </a>
                 {% if team and team.captain_id == member.id %}
-                  <span class="badge bg-primary ms-2">Captain</span>
+                  <span class="badge bg-primary ms-2">Capitaine</span>
                 {% endif %}
               </td>
               <td>{{ member.score }}</td>
@@ -2305,14 +2270,14 @@
     {% if privateteam_solves %}
     <div class="row">
       <div class="col-md-12">
-        <h3>Solves</h3>
+        <h3>Résolus</h3>
         <table class="table table-striped">
           <thead>
           <tr>
             <td><b>Challenge</b></td>
             <td class="d-none d-md-block d-lg-block"><b>Category</b></td>
-            <td><b>Value</b></td>
-            <td><b>Time</b></td>
+            <td><b>Valeur</b></td>
+            <td><b>Date</b></td>
           </tr>
           </thead>
           <tbody>
@@ -2357,7 +2322,7 @@
           <svg height="16" width="16">
             <circle cx="8" cy="8" r="5" fill="rgb(0, 209, 64)" />
           </svg>
-          <small x-text="\`Solves (\${getSolvePercentage()}%)\`"></small>
+          <small x-text="\`Résolus (\${getSolvePercentage()}%)\`"></small>
         </div>
         <div class="ps-2 float-start">
           <svg height="16" width="16">
@@ -2401,9 +2366,9 @@
       <button :class="\`btn btn-sm mb-1 btn-primary \${selected == 'info' ? 'border-dark' : ''}\`" type="button" @click="selected = 'info'"><span
           class="btn-text">Info</span></button>
       <button :class="\`btn btn-sm mb-1 btn-primary \${selected == 'members' ? 'border-dark' : ''}\`" type="button" @click="selected = 'members'"><span
-          class="btn-text">Members</span></button>
+          class="btn-text">Membres</span></button>
       <button :class="\`btn btn-sm mb-1 btn-primary \${selected == 'solves' ? 'border-dark' : ''}\`" type="button" @click="selected = 'solves'"><span
-          class="btn-text">Solves</span></button>
+          class="btn-text">Résolus</span></button>
     </div>
   </div>
                 {% endif %}
@@ -2411,8 +2376,8 @@
               // TODO: add this
               this.createPane({
                 name: "team",
-                title: `My Team`,
-                taskbar_title: `My Team`,
+                title: `Mon Equipe`,
+                taskbar_title: `Mon Equipe`,
                 recreate: `createPrivateTeamPane`,
                 initial_body_elem: elem,
                 icon_path: "/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/address_book_users.png",
@@ -2510,14 +2475,14 @@
 
       <div class="row">
         <div class="col-md-12">
-          <h3>Solves</h3>
+          <h3>Résolus</h3>
           <table class="table table-striped">
             <thead>
             <tr>
               <td><b>Challenge</b></td>
-              <td class="d-none d-md-block d-lg-block"><b>Category</b></td>
-              <td><b>Value</b></td>
-              <td><b>Time</b></td>
+              <td class="d-none d-md-block d-lg-block"><b>Catégorie</b></td>
+              <td><b>Valeur</b></td>
+              <td><b>Date</b></td>
             </tr>
             </thead>
             <tbody>
@@ -2562,7 +2527,7 @@
             <svg height="16" width="16">
               <circle cx="8" cy="8" r="5" fill="rgb(0, 209, 64)" />
             </svg>
-            <small x-text="\`Solves (\${getSolvePercentage()}%)\`"></small>
+            <small x-text="\`Résolus (\${getSolvePercentage()}%)\`"></small>
           </div>
           <div class="ps-2 float-start">
             <svg height="16" width="16">
@@ -2611,8 +2576,8 @@
 `
               this.createPane({
                 name: "user",
-                title: `My Profile`,
-                taskbar_title: `My Profile`,
+                title: `Mon Profile`,
+                taskbar_title: `Mon Profile`,
                 recreate: `createPrivateUserPane`,
                 initial_body_elem: elem,
                 icon_path: "/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/address_book_user.png",
@@ -2700,7 +2665,7 @@
                 <div class="d-flex flex-row justify-content-between align-items-center">
                   <p class="m-0">Unlock for ${h.cost} points</p>
                   <button class="btn btn-sm btn-primary" @click="unlockHint(${h.id})">
-                    <span class="btn-text">Unlock</span>
+                    <span class="btn-text">Débloquer</span>
                   </button>
                 </div>
               `;
@@ -2722,7 +2687,7 @@
               <p class="m-0">${filename}</p>
               <a href="${filepath}" target="_blank" rel="noopener">
                 <button class="btn btn-sm btn-primary">
-                  <span class="btn-text">Download</span>
+                  <span class="btn-text">Télécharger</span>
                 </button>
               </a>
             </div>
@@ -2742,7 +2707,7 @@
           <thead>
             <tr>
               <td>
-                <span><b>Name</b></span>
+                <span><b>Nom</b></span>
               </td>
               <td>
                 <span><b>Date</b></span>
@@ -2779,7 +2744,7 @@
             class="challenge-input form-control"
             x-model="submission"
             @keyup.enter="submitChallenge()"
-            placeholder="${c.solved_by_me ? "Challenge solved!" : "uiuctf{...}"}"
+            placeholder="${c.solved_by_me ? "Challenge résolu!" : "hackher{...}"}"
             ${c.solved_by_me ? "disabled" : ""}
           />
         </div>
@@ -2819,7 +2784,7 @@
             async triggerLogout() {
               await fetch('/logout')
               this.closeAllPanes()
-              this.createAlertPane({"title": "Logout Success", "type": "success", "content": "You have been logged out."})
+              this.createAlertPane({"title": "Déconnexion", "type": "success", "content": "Vous êtes bien déconnecté."})
               location.reload()
             }
 
@@ -2836,13 +2801,13 @@
               if (error === null || error.includes('not started')) {
                 this.closePanes('login')
                 if (statusCode === 403) {
-                  this.createAlertPane({"title": "Login Error", "content": "Login form expired. Please try again."});
+                  this.createAlertPane({"title": "Erreur", "content": "Votre session a expiré."});
                 } else {
-                  this.createAlertPane({"title": "Login Success", "type": "success", "content": "Welcome back to UIUCTF 2023."})
+                  this.createAlertPane({"title": "Identifié !", "type": "success", "content": "Bienvenue au HackHer 2024."})
                 }
                 location.reload();
               } else if (!!error) {
-                this.createAlertPane({"title": 'Login Error', "content": error});
+                this.createAlertPane({"title": 'Erreur', "content": error});
               }
             }
 
@@ -3170,39 +3135,39 @@
                   <div x-bind:disabled="$store.globals.user === null" :class="$store.globals.user === null ? 'pe-none item-disabled user-select-none' : ''" @click="desktop.createPrivateUserPane()">
                     <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/address_book_user.png" />
                     <span>
-                      My Profile
+                      Mon Profile
                     </span>
                   </div>
                   <div x-bind:disabled="$store.globals.user === null" :class="$store.globals.user === null ? 'pe-none item-disabled user-select-none' : ''" @click="desktop.createPrivateTeamPane()">
                     <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/address_book_users.png" />
                     <span>
-                      My Team
+                      Mon Equipe
                     </span>
                   </div>
                   <div style="border-bottom: 1px solid #808080"  @click="desktop.createInfoPane()">
                     <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/help_book_big-1.png" />
                     <span>
-                      Information
+                      Informations
                     </span>
                   </div>
                   <div x-show="$store.globals.user !== null"  style="border-top: 1px solid #ffffff" @click="desktop.createSettingsPane()"">
                     <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/settings_gear-1.png" />
                     <span>
-                      Settings
+                      Paramètres
                     </span>
                   </div>
                   <div x-show="$store.globals.user !== null" @click="desktop.triggerLogout()">
                     <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/key_win-1.png" />
-                    <span x-text="'Log out...'">
+                    <span x-text="'Déconnexion...'">
                     </span>
                   </div>
                   <div x-show="$store.globals.user === null" @click="desktop.createRegisterPane()" style="border-top: 1px solid #ffffff">
                     <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/msagent-1.png" />
-                    <span>Register</span>
+                    <span>S'Enregistrer</span>
                   </div>
                   <div x-show="$store.globals.user === null" @click="desktop.createLoginPane()">
                     <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/key_win-1.png" />
-                    <span x-text="'Log in...'">
+                    <span x-text="'S'identifier...'">
                     </span>
                   </div>
                 </div>
@@ -3210,13 +3175,13 @@
             </div>
             <a class="nav-link d-flex flex-row font-weight-bold" role="button" :class="{ 'pane-focused': $store.globals.show_start === true }" @click="desktop.markAllUnfocused(); $store.globals.show_start = !$store.globals.show_start">
               <img class="taskbar-icon" src="/themes/uiuctf-2023-ctfd-theme/static/img/uiuctf-2023-pwny.svg" />
-              <div>Start</div>
+              <div>Démarer</div>
             </a>
           </li>
         </ul>
         <div class="d-flex flex-row align-items-center">
           <div class="mr-1 cursor-pointer font-xsmall d-flex flex-row align-items-center" @click="desktop.createConfirmClosePane();">
-            <div>Close All</div>
+            <div>Tout fermer</div>
             <img class="pl-1" src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/recycle_bin_full-1.png" />
           </div>
           <div id="time" class="time text-center">12:00 AM</div>
