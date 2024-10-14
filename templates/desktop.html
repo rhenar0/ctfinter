@@ -991,7 +991,7 @@
                             style="display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(64px, 96px));"
                             x-data="{people: [
                               { name:'Rhenar (Hugo)', img:'https://avatars.githubusercontent.com/u/15929760', href:'https://github.com/rhenar0' },
-                              { name:'Blusomething (Joris)', img:'', href:'https://github.com/richyliu' },
+                              { name:'Blusomething (Joris)', img:'https://avatars.githubusercontent.com/u/71839744', href:'https://github.com/jorisvey' },
                               { name:'Othmane Erraji', img:'https://media.licdn.com/dms/image/v2/C4D03AQGXmFV6ioXb6g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517528483962?e=1733961600&v=beta&t=KdgnKjMy0ozuTItNpAPEH49R8nPpZ2xt91YIAOqm8U4', href:'https://www.linkedin.com/in/oerraji/' }
                             ]}"
                             x-init="people.sort((a, b) => 0.5 - Math.random())"
@@ -3167,7 +3167,8 @@
                   </div>
                   <div x-show="$store.globals.user === null" @click="desktop.createLoginPane()">
                     <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/key_win-1.png" />
-                    <span x-text="'S'identifier...'">
+                    <span x-text="'Identification'">
+
                     </span>
                   </div>
                 </div>

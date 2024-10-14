@@ -4,6 +4,7 @@
     url("../fonts/w-95-sans-serif.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-size: large;
 }
 
 /**
@@ -11,6 +12,7 @@
  */
 
 .bg-primary {
+  background-image: url('../../img/play.jpg');
   background-color: #c0c0c0 !important;
 }
 
