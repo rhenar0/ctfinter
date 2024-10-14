@@ -4,6 +4,7 @@
     url("../fonts/w-95-sans-serif.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+  font-size: large;
 }
 
 /**
@@ -11,11 +12,21 @@
  */
 
 .bg-primary {
-  background-color: #c0c0c0 !important;
+  background-image: url('../img/play.jpg') !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-color: #c0c0c0 ;
 }
 
 .bg-secondary {
-  background-color: #008080 !important;
+  background-image: url('../img/play.jpg') !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-color: #c7452e;
 }
 
 .bg-tertiary {
