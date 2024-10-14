@@ -12,21 +12,21 @@
  */
 
 .bg-primary {
-  background-image: url('../../img/play.jpg');
+  background-image: url('../../img/play.jpg') !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  background-color: #c0c0c0 !important;
+  background-color: #c0c0c0 ;
 }
 
 .bg-secondary {
-  background-color: #008080 !important;
-  background-image: url('../../img/play.jpg');
+  background-image: url('../../img/play.jpg') !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  background-color: #008080;
 }
 
 .bg-tertiary {
