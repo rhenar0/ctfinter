@@ -1,10 +1,9 @@
 @font-face {
   font-family: "Windows 95";
   src: url("../fonts/w-95-sans-serif.woff2") format("woff2"),
-    url("../fonts/w-95-sans-serif.woff") format("woff");
+    url("../fonts/-sans-serif.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-size: large;
 }
 
 /**
