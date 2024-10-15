@@ -1010,7 +1010,7 @@
                   </div>
                   <div class="d-flex flex-column pl-2">
                     <button :class="\`btn btn-sm mb-1 btn-primary \${selected == 'about' ? 'border-dark' : ''}\`" type="button" @click="selected = 'about'">
-                      <span class="btn-text">A Propos</span>
+                      <span class="btn-text">Infos</span>
                     </button>
                     <button :class="\`btn btn-sm mb-1 btn-primary \${selected == 'when' ? 'border-dark' : ''}\`" type="button" @click="selected = 'when'">
                       <span class="btn-text">Quand</span>
@@ -1570,15 +1570,15 @@
                 });
                 if (!data.success) {
                     this.createAlertPane({
-                      title: "403 Error",
-                      content: `/challenges is not accessible.<br/><br/>Access is denied.<br/><br/>You may need to <a href="#" @click="desktop.createLoginPane(); event.stopPropagation();">log in</a>, or <a href="#" @click="desktop.createPrivateTeamPane(); event.stopPropagation();">be on a team</a>.`,
+                      title: "403 Erreur",
+                      content: `/challenges n'est pas accessible.<br/><br/>Accès refusé.<br/><br/>Vous devez surement vous identifier <a href="#" @click="desktop.createLoginPane(); event.stopPropagation();">log in</a>, ou <a href="#" @click="desktop.createPrivateTeamPane(); event.stopPropagation();">être dans une équipe</a>.`,
                     });
                 }
 
               }).catch(err => {
                 this.createAlertPane({
-                    title: "302 Error",
-                    content: `/challenges is not accessible.<br/><br/>Access is denied.<br/><br/>You may need to <a href="#" @click="desktop.createLoginPane(); event.stopPropagation();">log in</a>, or <a href="#" @click="desktop.createPrivateTeamPane(); event.stopPropagation();">be on a team</a>.`,
+                    title: "302 Erreur",
+                    content: `/challenges n'est pas accessible.<br/><br/>Accès refusé.<br/><br/>Vous devez surement vous identifier <a href="#" @click="desktop.createLoginPane(); event.stopPropagation();">log in</a>, ou <a href="#" @click="desktop.createPrivateTeamPane(); event.stopPropagation();">être dans une équipe</a>.`,
                 })     
               })
             }
