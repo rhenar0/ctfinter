@@ -722,6 +722,7 @@
               const firstLoad = localStorage.getItem(`desktop-${this.id}`) === null;
               if (firstLoad) {
                 this.createInfoPane()
+                this.createSpnsorPane()
               }
             }
 
@@ -981,6 +982,9 @@
                           <div class="col-6 mb-2">
                             <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/maya.png" class="img-fluid" alt="">
                           </div>
+                          <div class="col-6 mb-2">
+                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/tersedia.png" class="img-fluid" alt="">
+                          </div>
                         </div>
                       </div>
                     </template>
@@ -1032,6 +1036,55 @@
                 title: "Informations",
                 recreate: `createInfoPane`,
                 taskbar_title: "Informations",
+                initial_body_elem: elem,
+                icon_path: "/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/help_book_big-1.png",
+                width: "600px",
+                height: "300px",
+                transform: "center",
+                ...params,
+              });
+            }
+
+            createSpnsorPane(params) {
+              const elem = `
+              <div class="d-flex flex-column h-100 w-100 overflow-hidden" x-data="{selected: 'about'}">
+                <h5>Bienvenue au <b>HackHer 2024</b></h5>
+                <div class="d-flex flex-row w-100 mt-3" style="height: calc(100% - 2.75rem);">
+                  <div class="info-panel d-flex flex-column flex-grow-1 p-3 overflow-auto">
+                    <template x-if="selected == 'sponsors'">
+                      <div class="text-center">
+                        <p>
+                          L'évènement HackHer remercie ses Sponsors:
+                        </p>
+                        <div class="d-flex flex-column align-items-center">
+                          <div class="col-6 mb-2">
+                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/oteria.png" class="img-fluid" alt="">
+                          </div>
+                          <div class="col-6 mb-2">
+                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/quarkslab.png" class="img-fluid" alt="">
+                          </div>
+                          <div class="col-6 mb-2">
+                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/maya.png" class="img-fluid" alt="">
+                          </div>
+                          <div class="col-6 mb-2">
+                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/tersedia.png" class="img-fluid" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </template>
+                  </div>
+                  <div class="d-flex flex-column pl-2">
+                    <button :class="\`btn btn-sm mb-1 btn-primary \${selected == 'sponsors' ? 'border-dark' : ''}\`" type="button" @click="selected = 'sponsors'">
+                      <span class="btn-text">Sponsors</span>
+                    </button>
+                  </div>
+                </div>
+              </div>`
+              this.createPane({
+                name: "spnsor",
+                title: "Sponsors",
+                recreate: `createSpnsorPane`,
+                taskbar_title: "Sponsors",
                 initial_body_elem: elem,
                 icon_path: "/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/help_book_big-1.png",
                 width: "600px",
