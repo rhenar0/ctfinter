@@ -1047,7 +1047,7 @@
 
             createSpnsorPane(params) {
               const elem = `
-              <div class="d-flex flex-column h-100 w-100 overflow-hidden" x-data="{selected: 'about'}">
+              <div class="d-flex flex-column h-100 w-100 overflow-hidden" x-data="{selected: 'sponsors'}">
                 <h5>Bienvenue au <b>HackHer 2024</b></h5>
                 <div class="d-flex flex-row w-100 mt-3" style="height: calc(100% - 2.75rem);">
                   <div class="info-panel d-flex flex-column flex-grow-1 p-3 overflow-auto">
@@ -3198,6 +3198,12 @@
                     <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/help_book_big-1.png" />
                     <span>
                       Informations
+                    </span>
+                  </div>
+                  <div style="border-bottom: 1px solid #808080"  @click="desktop.createSpnsorPane()">
+                    <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/help_book_big-1.png" />
+                    <span>
+                      Sponsors
                     </span>
                   </div>
                   <div x-show="$store.globals.user !== null"  style="border-top: 1px solid #ffffff" @click="desktop.createSettingsPane()"">
