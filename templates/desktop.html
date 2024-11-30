@@ -1520,94 +1520,7 @@
 
 <div class="col-md-8">
   <div class="tab-content" id="v-pills-tabContent">
-    <div class="tab-pane fade show active" id="profile" role="tabpanel">
-      {% include "components/errors.html" %}
-
-      {% with form = Forms.self.SettingsForm(country=settings_country) %}
-        <form
-            method="post" accept-charset="utf-8" autocomplete="off" role="form"
-            x-data="SettingsForm"
-            @submit.prevent="updateProfile()"
-            class="form-horizontal"
-        >
-
-          <div class="mb-3">
-            <b>{{ form.name.label(class="form-label") }}</b>
-            {{ form.name(class="form-control", value=settings_name) }}
-          </div>
-
-          <div class="mb-3">
-            <b>{{ form.email.label(class="form-label") }}</b>
-            {{ form.email(class="form-control", value=settings_email) }}
-          </div>
-
-          <hr>
-
-          <div class="mb-3">
-            <b>{{ form.confirm.label(class="form-label") }}</b>
-            {{ form.confirm(class="form-control") }}
-          </div>
-          <div class="mb-3">
-            <b>{{ form.password.label(class="form-label") }}</b>
-            {{ form.password(class="form-control") }}
-          </div>
-
-          <hr>
-
-          <div class="mb-3">
-            <b>{{ form.affiliation.label(class="form-label") }}</b>
-            {{ form.affiliation(class="form-control", value=settings_affiliation or "") }}
-          </div>
-          <div class="mb-3">
-            <b>{{ form.website.label(class="form-label") }}</b>
-            {{ form.website(class="form-control", value=settings_website or "") }}
-          </div>
-          <div class="mb-3">
-            <b>{{ form.country.label(class="form-label") }}</b>
-            {{ form.country(class="form-control form-select", value=settings_country) }}
-          </div>
-
-          <hr>
-
-          {{ render_extra_fields(form.extra) }}
-
-          <div id="results" class="mb-3">
-            <div
-                class="alert alert-success alert-dismissible submit-row" role="alert"
-                x-cloak="success" x-show="success"
-            >
-              <strong>Appliqué!</strong>
-              Votre profil vient d'être mis à jour.
-              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fermer">
-                <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win95-pane-control/close.png" alt="">
-                <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win95-pane-control/close_pressed.png" alt="">
-              </button>
-            </div>
-
-
-            <template x-for="(msg, idx) in errors" :key="idx">
-              <div class="alert alert-danger alert-dismissible" role="alert">
-                <span class="sr-only">Erreur:</span>
-                <span x-text="msg"></span>
-                <button
-                    type="button" class="btn-close" data-bs-dismiss="alert"
-                    aria-label="Fermer"
-                >
-                <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win95-pane-control/close.png" alt="">
-                <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win95-pane-control/close_pressed.png" alt="">
-                </button>
-              </div>
-            </template>
-          </div>
-
-          <div class="mb-3">
-            {{ form.submit(class="btn btn-primary float-end px-4") }}
-          </div>
-        </form>
-      {% endwith %}
-    </div>
-
-    <div class="tab-pane fade" id="tokens" role="tabpanel">
+    <div class="tab-pane fade show active" id="tokens" role="tabpanel">
 
       {% with form = Forms.self.TokensForm() %}
         <form method="POST" x-data="TokensForm" @submit.prevent="generateToken()" class="mb-3">
@@ -1665,7 +1578,7 @@
       {% if settings_tokens %}
         <hr>
 
-        <h4 class="text-center mt-3">Active Tokens</h4>
+        <h4 class="text-center mt-3">Tokens Actif</h4>
 
         {# This has to be wrapping the table modal, because div with modal will get pushed out
            of the table and alpine ref will not work #}
@@ -1677,7 +1590,7 @@
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Delete Token</h5>
+                  <h5 class="modal-title">Supprimer Token</h5>
                   <button
                       type="button" class="btn-close" data-bs-dismiss="modal"
                       aria-label="Close"
@@ -1687,18 +1600,18 @@
                 </div>
 
                 <div class="modal-body">
-                  <p>Are you sure you want to delete this token?</p>
+                  <p>Voulez vous vraiment supprimer le token ?</p>
                 </div>
 
                 <div class="modal-footer">
                   <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
-                    <span class="btn-text">No</span>
+                    <span class="btn-text">Non</span>
                   </button>
                   <button
                       type="button" class="btn btn-primary" data-bs-dismiss="modal"
                       @click="deleteSelectedToken()"
                   >
-                    <span class="btn-text">Yes</span>
+                    <span class="btn-text">Oui</span>
                   </button>
                 </div>
               </div>
@@ -1708,9 +1621,9 @@
           <table class="table table-striped">
             <thead>
             <tr>
-              <td class="text-center"><b>Created</b></td>
-              <td><b>Expiration</b></td>
-              <td><b>Delete</b></td>
+              <td class="text-center"><b>Créé</b></td>
+              <td><b>Expire</b></td>
+              <td><b>Supprimer</b></td>
             </tr>
             </thead>
             <tbody>
@@ -1726,7 +1639,7 @@
                   <span
                       class="delete-token" role="button"
                       @click="deleteTokenModal({{ token.id }})">
-                      Delete
+                      Supprimer
                   </span>
                 </td>
               </tr>
