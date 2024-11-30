@@ -912,7 +912,7 @@
               `;
               this.createPane({
                 name: "login",
-                title: "Bienvenue au HackHer 2024",
+                title: "Bienvenue à l'Oteria Cyber Cup 2024",
                 recreate: `createLoginPane`,
                 taskbar_title: "Log In",
                 initial_body_elem: elem,
@@ -929,7 +929,7 @@
             createInfoPane(params) {
               const elem = `
               <div class="d-flex flex-column h-100 w-100 overflow-hidden" x-data="{selected: 'about'}">
-                <h5>Bienvenue au <b>HackHer 2024</b></h5>
+                <h5>Bienvenue au <b>l'Oteria Cyber Cup 2024</b></h5>
                 <div class="d-flex flex-row w-100 mt-3" style="height: calc(100% - 2.75rem);">
                   <div class="info-panel d-flex flex-column flex-grow-1 p-3 overflow-auto">
                     <template x-if="selected == 'about'">
@@ -938,7 +938,7 @@
                           <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/tip.png" alt="">
                           <p class="font-weight-bold ml-2 mt-2">Le saviez vous ?...</p>
                         </div>
-                        <p>Nous avons un <a href="https://discord.gg/PytGqjq" target="_blank" rel="noopener noreferrer"> Discord !</a></p>
+                        <p>Nous avons un <a href="https://discord.gg/ne3uyWkFmc" target="_blank" rel="noopener noreferrer"> Discord !</a></p>
                         <p>Cliquez sur Démarrer > S'identifier... pour commencer le CTF.</p>
                         <p>Si vous avez du mal avec ce thème, vous pouvez utiliser le thème par défaut <a href="/challenges" target="_blank" rel="noopener noreferrer">ici</a>.</p>
                       </div>
@@ -946,7 +946,7 @@
                     <template x-if="selected == 'when'">
                       <div>
                         <p>
-                          Le HackHer 2024 se tiendra le Samedi 19 Octobre 2024, 10:00 — Samedi 19 Octobre 2024, 18:00.
+                          L'Oteria Cyber Cup 2024 se tiendra le Samedi 7 Décembre 2024, 10:00 — Samedi 7 Décembre 2024, 17:00.
                         </p>
                         <!-- https://codepen.io/harsh/pen/KKdEVPV -->
                         <div x-data="timer()">
@@ -961,42 +961,36 @@
                           Voilà quelques prix pour le podium !
                         </p>
                         <ul>
-                          <li>Première Place - Flipper Zero & Abonnement HTB/pers</li>
-                          <li>Seconde Place - Abonnement HTB/pers</li>
-                          <li>Troisième Place - Abonnement HTB/pers</li>
+                          <li>Première Place - 500€</li>
+                          <li>Seconde Place - 300€</li>
+                          <li>Troisième Place - 150€</li>
+                          <li>Les membres des 10 premières équipes sont admissibles à Oteria pour une session d'admission (pas de test technique à passer)</li>
                         </ul>
                       </div>
                     </template>
                     <template x-if="selected == 'sponsors'">
                       <div class="text-center">
                         <p>
-                          L'évènement HackHer remercie ses Sponsors:
+                          L'évènement Oteria Cyber Cup remercie ses Sponsors:
                         </p>
                         <div class="d-flex flex-column align-items-center">
                           <div class="col-6 mb-2">
-                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/oteria.png" class="img-fluid" alt="">
+                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/dgse.png" class="img-fluid" alt="">
                           </div>
                           <div class="col-6 mb-2">
-                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/quarkslab.png" class="img-fluid" alt="">
-                          </div>
-                          <div class="col-6 mb-2">
-                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/maya.png" class="img-fluid" alt="">
-                          </div>
-                          <div class="col-6 mb-2">
-                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/tersedia.png" class="img-fluid" alt="">
+                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/synacktiv.png" class="img-fluid" alt="">
                           </div>
                         </div>
                       </div>
                     </template>
                     <template x-if="selected == 'team'">
                       <div class="d-flex flex-column">
-                        <p>La Team HackHer !</p>
+                        <p>La Team Oteria Cyber Cup !</p>
                           <div
                             style="display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(64px, 96px));"
                             x-data="{people: [
                               { name:'Rhenar (Hugo)', img:'https://avatars.githubusercontent.com/u/15929760', href:'https://github.com/rhenar0' },
-                              { name:'Blusomething (Joris)', img:'https://avatars.githubusercontent.com/u/71839744', href:'https://github.com/jorisvey' },
-                              { name:'Othmane Erraji', img:'https://media.licdn.com/dms/image/v2/C4D03AQGXmFV6ioXb6g/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517528483962?e=1733961600&v=beta&t=KdgnKjMy0ozuTItNpAPEH49R8nPpZ2xt91YIAOqm8U4', href:'https://www.linkedin.com/in/oerraji/' }
+                              { name:'Blusomething (Joris)', img:'https://avatars.githubusercontent.com/u/71839744', href:'https://github.com/jorisvey' }
                             ]}"
                             x-init="people.sort((a, b) => 0.5 - Math.random())"
                           >
@@ -1048,26 +1042,20 @@
             createSpnsorPane(params) {
               const elem = `
               <div class="d-flex flex-column h-100 w-100 overflow-hidden" x-data="{selected: 'sponsors'}">
-                <h5>Bienvenue au <b>HackHer 2024</b></h5>
+                <h5>Bienvenue à <b>l'Oteria Cyber Cup 2024</b></h5>
                 <div class="d-flex flex-row w-100 mt-3" style="height: calc(100% - 2.75rem);">
                   <div class="info-panel d-flex flex-column flex-grow-1 p-3 overflow-auto">
                     <template x-if="selected == 'sponsors'">
                       <div class="text-center">
                         <p>
-                          L'évènement HackHer remercie ses Sponsors:
+                          L'évènement Oteria Cyber Cup remercie ses Sponsors:
                         </p>
                         <div class="d-flex flex-column align-items-center">
                           <div class="col-6 mb-2">
-                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/oteria.png" class="img-fluid" alt="">
+                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/dgse.png" class="img-fluid" alt="">
                           </div>
                           <div class="col-6 mb-2">
-                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/quarkslab.png" class="img-fluid" alt="">
-                          </div>
-                          <div class="col-6 mb-2">
-                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/maya.png" class="img-fluid" alt="">
-                          </div>
-                          <div class="col-6 mb-2">
-                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/tersedia.png" class="img-fluid" alt="">
+                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/synacktiv.png" class="img-fluid" alt="">
                           </div>
                         </div>
                       </div>
@@ -1173,7 +1161,7 @@
 
               this.createPane({
                 name: "register",
-                title: "S'enregistrer au HackHer",
+                title: "S'enregistrer à l'Oteria Cyber Cup",
                 taskbar_title: "Register",
                 recreate: `createRegisterPane`,
                 initial_body_elem: elem,
@@ -1269,6 +1257,11 @@
         class="nav-link active" id="settings-profile-tab" data-bs-toggle="pill"
         data-bs-target="#profile" role="tab"
     >Profile
+    </button>
+    <button
+        class="nav-link" id="settings-tokens-tab" data-bs-toggle="pill" data-bs-target="#tokens"
+        role="tab"
+    >Access Tokens
     </button>
   </div>
 </div>
@@ -2856,7 +2849,7 @@
                 if (statusCode === 403) {
                   this.createAlertPane({"title": "Erreur", "content": "Votre session a expiré."});
                 } else {
-                  this.createAlertPane({"title": "Identifié !", "type": "success", "content": "Bienvenue au HackHer 2024."})
+                  this.createAlertPane({"title": "Identifié !", "type": "success", "content": "Bienvenue à l'Oteria Cyber Cup 2024."})
                 }
                 location.reload();
               } else if (!!error) {
