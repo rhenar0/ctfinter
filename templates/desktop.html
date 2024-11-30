@@ -1510,7 +1510,6 @@
 {% from "macros/forms.html" import render_extra_fields %}
 
 <div class="col-md-8">
-    <div class="tab-pane fade show active" id="tokens" role="tabpanel">
 
       {% with form = Forms.self.TokensForm() %}
         <form method="POST" x-data="TokensForm" @submit.prevent="generateToken()" class="mb-3">
@@ -1640,7 +1639,6 @@
         </div>
       {% endif %}
 
-    </div>
 </div>
 </div>`
               this.createPane({
