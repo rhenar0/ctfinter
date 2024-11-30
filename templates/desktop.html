@@ -1508,15 +1508,6 @@
             async createTokenPane(params) {
               const elem = `<div class="row">
 {% from "macros/forms.html" import render_extra_fields %}
-<div class="col-md-3 offset-md-1 mb-3 mb-md-0">
-  <div class="nav flex-column nav-pills" role="tablist">
-    <button
-        class="nav-link" id="settings-tokens-tab" data-bs-toggle="pill" data-bs-target="#tokens"
-        role="tab"
-    >Access Tokens
-    </button>
-  </div>
-</div>
 
 <div class="col-md-8">
   <div class="tab-content" id="v-pills-tabContent">
