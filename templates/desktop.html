@@ -3451,6 +3451,12 @@
                       Sponsors
                     </span>
                   </div>
+                  <div x-show="$store.globals.user !== null"  style="border-top: 1px solid #ffffff" @click="desktop.createTokenPane()"">
+                    <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/user_key-1.png" />
+                    <span>
+                      Token API
+                    </span>
+                  </div>
                   <div x-show="$store.globals.user !== null"  style="border-top: 1px solid #ffffff" @click="desktop.createSettingsPane()"">
                     <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/settings_gear-1.png" />
                     <span>
