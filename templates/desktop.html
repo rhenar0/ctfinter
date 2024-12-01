@@ -3000,7 +3000,12 @@
                 }
                 location.reload();
               } else if (error.includes('participer')) {
+                this.closePanes('login')
                 this.createAlertPane({"title": "Identifié !", "type": "success", "content": "Bienvenue à l'Oteria Cyber Cup 2024. N'oubliez pas de rejoindre une équipe !"})
+                location.reload();
+              } else if (error.includes(' ')) {
+                this.closePanes('login')
+                this.createAlertPane({"title": "Identifié !", "type": "success", "content": "Bienvenue à l'Oteria Cyber Cup 2024."})
                 location.reload();
               } else if (!!error) {
                 this.createAlertPane({"title": 'Erreur', "content": error});
