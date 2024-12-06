@@ -10,6 +10,10 @@
  * = Backgrounds
  */
 
+.card-header-content {
+  overflow: visible !important;
+}
+
 .bg-primary {
   background-image: url('../../img/play.jpg') !important;
   background-position: center;
