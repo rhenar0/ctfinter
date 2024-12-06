@@ -6,6 +6,10 @@
   font-style: normal;
 }
 
+.card-header-content {
+  overflow: visible !important;
+}
+
 /**
  * = Backgrounds
  */
