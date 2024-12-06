@@ -14,22 +14,6 @@
   overflow: visible !important;
 }
 
-.card-body {
-  overflow: visible !important;
-}
-
-.w95-input-border * {
-  overflow: visible !important;
-}
-
-.challenge-input * {
-  overflow: visible !important;
-}
-
-.form-control * {
-  overflow: visible !important;
-}
-
 .bg-primary {
   background-image: url('../../img/play.jpg') !important;
   background-position: center;
