@@ -2938,7 +2938,7 @@
             class="challenge-input form-control"
             x-model="submission"
             @keyup.enter="submitChallenge()"
-            placeholder="${c.solved_by_me ? "Challenge résolu!" : "hackher{...}"}"
+            placeholder="${c.solved_by_me ? "Challenge résolu!" : "OCC{...}"}"
             ${c.solved_by_me ? "disabled" : ""}
           />
         </div>
@@ -3049,9 +3049,9 @@
               if (error === null || error.includes('not started')) {
                 this.closePanes('register')
                 if (statusCode === 403) {
-                  this.createAlertPane({"title": "Registration Error","content": "Register form expired. Please try again."});
+                  this.createAlertPane({"title": "Registration Error","content": "L'enregistrement a expiré... Retentez !"});
                 } else {
-                  this.createAlertPane({"title": "Registration Success", "type": "success", "content": "Welcome to UIUCTF 2023!"})
+                  this.createAlertPane({"title": "Registration Success", "type": "success", "content": "Bienvenue à l'Oteria Cyber Cup 2024!"})
                 }
                 location.reload();
               } else if (!!error) {
