@@ -928,7 +928,7 @@
 
             createInfoPane(params) {
               const elem = `
-              <div class="d-flex flex-column h-100 w-100" x-data="{selected: 'about'}">
+              <div class="d-flex flex-column h-100 w-100 overflow-hidden" x-data="{selected: 'about'}">
                 <h5>Bienvenue à <b>l'Oteria Cyber Cup 2024</b></h5>
                 <div class="d-flex flex-row w-100 mt-3" style="height: calc(100% - 2.75rem);">
                   <div class="info-panel d-flex flex-column flex-grow-1 p-3 overflow-auto">
@@ -1042,7 +1042,7 @@
 
             createSpnsorPane(params) {
               const elem = `
-              <div class="d-flex flex-column h-100 w-100" x-data="{selected: 'sponsors'}">
+              <div class="d-flex flex-column h-100 w-100 overflow-hidden" x-data="{selected: 'sponsors'}">
                 <h5>Bienvenue à <b>l'Oteria Cyber Cup 2024</b></h5>
                 <div class="d-flex flex-row w-100 mt-3" style="height: calc(100% - 2.75rem);">
                   <div class="info-panel d-flex flex-column flex-grow-1 p-3 overflow-auto">
@@ -1694,7 +1694,7 @@
               const elem = `
                 <div x-data="ChallengeBoard" class="d-flex flex-column h-100 w-100" @load-challenges.window="loadChallenges()">
                   <div
-                    class="d-flex flex-grow-1 mx-2 mb-2 w95-input-border"
+                    class="d-flex flex-grow-1 mx-2 mb-2 overflow-hidden w95-input-border"
                   >
                     <div class="d-flex flex-column flex-grow-1 px-3 py-2 bg-white overflow-auto">
                       <div x-show="!loaded">
