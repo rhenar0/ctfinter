@@ -10,7 +10,7 @@
   overflow: visible !important;
 }
 
-.card-body * {
+.card-body {
   overflow: visible !important;
 }
 
@@ -18,7 +18,7 @@
   overflow: visible !important;
 }
 
-.challenge-input form-control * {
+.challenge-input * {
   overflow: visible !important;
 }
 
