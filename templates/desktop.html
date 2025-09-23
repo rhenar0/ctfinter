@@ -912,7 +912,7 @@
               `;
               this.createPane({
                 name: "login",
-                title: "Bienvenue à l'Oteria Cyber Cup 2024",
+                title: "Bienvenue au CTF OTERIA - M1 2025",
                 recreate: `createLoginPane`,
                 taskbar_title: "Log In",
                 initial_body_elem: elem,
@@ -929,7 +929,7 @@
             createInfoPane(params) {
               const elem = `
               <div class="d-flex flex-column h-100 w-100 overflow-hidden" x-data="{selected: 'about'}">
-                <h5>Bienvenue à <b>l'Oteria Cyber Cup 2024</b></h5>
+                <h5>Bienvenue au <b>CTF OTERIA - M1 2025</b></h5>
                 <div class="d-flex flex-row w-100 mt-3" style="height: calc(100% - 2.75rem);">
                   <div class="info-panel d-flex flex-column flex-grow-1 p-3 overflow-auto">
                     <template x-if="selected == 'about'">
@@ -946,7 +946,7 @@
                     <template x-if="selected == 'when'">
                       <div>
                         <p>
-                          L'Oteria Cyber Cup 2024 se tiendra le Samedi 7 Décembre 2024, 10:00 — Samedi 7 Décembre 2024, 17:00.
+                          Le CTF OTERIA - M1 2025 se tiendra le Vendredi 26 Septembre 2025, 10:00 — Vendredi 26 Septembre 2025, 17:00.
                         </p>
                         <!-- https://codepen.io/harsh/pen/KKdEVPV -->
                         <div x-data="timer()">
@@ -961,37 +961,18 @@
                           Voilà quelques prix pour le podium !
                         </p>
                         <ul>
-                          <li>Première Place - 500€</li>
-                          <li>Seconde Place - 300€</li>
-                          <li>Troisième Place - 150€</li>
-                          <li>Les membres des 10 premières équipes sont admissibles à Oteria pour une session d'admission (pas de test technique à passer)</li>
+                          <li>Première Place - T-Shirts Exclu !</li>
                         </ul>
-                      </div>
-                    </template>
-                    <template x-if="selected == 'sponsors'">
-                      <div class="text-center">
-                        <p>
-                          L'évènement Oteria Cyber Cup remercie ses Sponsors:
-                        </p>
-                        <div class="d-flex flex-column align-items-center">
-                          <div class="col-6 mb-2">
-                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/dgse.png" class="img-fluid" alt="">
-                          </div>
-                          <div class="col-6 mb-2">
-                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/synacktiv.png" class="img-fluid" alt="">
-                          </div>
-                        </div>
                       </div>
                     </template>
                     <template x-if="selected == 'team'">
                       <div class="d-flex flex-column">
-                        <p>La Team Oteria Cyber Cup !</p>
+                        <p>La Team Oteria !</p>
                           <div
                             style="display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(64px, 96px));"
                             x-data="{people: [
                               { name:'Rhenar (Hugo)', img:'https://avatars.githubusercontent.com/u/15929760', href:'https://github.com/rhenar0' },
-                              { name:'Blusomething (Joris)', img:'https://media.discordapp.net/attachments/1050028102010540062/1313097535845564579/GcxDT3AbcAI9-5p.png?ex=674ee4e0&is=674d9360&hm=c91ccce33ee1505953448e20026c9d93091e935ab255235da7c4416df48ff4d7&=&format=webp&quality=lossless', href:'https://github.com/jorisvey' },
-                              { name:'Wardenfar (Théo)', img:'https://avatars.githubusercontent.com/u/20862992', href:'https://github.com/Wardenfar' }
+                              { name:'Blusomething (Joris)', img:'https://cdn.discordapp.com/avatars/207805906161762304/efd2935819e8312735ccd2889a7aa23e?size=1024', href:'https://github.com/jorisvey' },
                             ]}"
                             x-init="people.sort((a, b) => 0.5 - Math.random())"
                           >
@@ -1043,22 +1024,14 @@
             createSpnsorPane(params) {
               const elem = `
               <div class="d-flex flex-column h-100 w-100 overflow-hidden" x-data="{selected: 'sponsors'}">
-                <h5>Bienvenue à <b>l'Oteria Cyber Cup 2024</b></h5>
+                <h5>Bienvenue au <b>CTF OTERIA - M1 2025</b></h5>
                 <div class="d-flex flex-row w-100 mt-3" style="height: calc(100% - 2.75rem);">
                   <div class="info-panel d-flex flex-column flex-grow-1 p-3 overflow-auto">
                     <template x-if="selected == 'sponsors'">
                       <div class="text-center">
                         <p>
-                          L'évènement Oteria Cyber Cup remercie ses Sponsors:
+                          L'évènement CTF OTERIA - M1 2025 remercie ses Sponsors:
                         </p>
-                        <div class="d-flex flex-column align-items-center">
-                          <div class="col-6 mb-2">
-                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/dgse.png" class="img-fluid" alt="">
-                          </div>
-                          <div class="col-6 mb-2">
-                            <img src="/themes/uiuctf-2023-ctfd-theme/static/img/sponsor/synacktiv.png" class="img-fluid" alt="">
-                          </div>
-                        </div>
                       </div>
                     </template>
                   </div>
@@ -1162,7 +1135,7 @@
 
               this.createPane({
                 name: "register",
-                title: "S'enregistrer à l'Oteria Cyber Cup",
+                title: "S'enregistrer au CTF OTERIA - M1 2025",
                 taskbar_title: "Register",
                 recreate: `createRegisterPane`,
                 initial_body_elem: elem,
@@ -2997,16 +2970,16 @@
                 if (statusCode === 403) {
                   this.createAlertPane({"title": "Erreur", "content": "Votre session a expiré."});
                 } else {
-                  this.createAlertPane({"title": "Identifié !", "type": "success", "content": "Bienvenue à l'Oteria Cyber Cup 2024."})
+                  this.createAlertPane({"title": "Identifié !", "type": "success", "content": "Bienvenue CTF OTERIA - M1 2025."})
                 }
                 location.reload();
               } else if (error.includes('participer')) {
                 this.closePanes('login')
-                this.createAlertPane({"title": "Identifié !", "type": "success", "content": "Bienvenue à l'Oteria Cyber Cup 2024. N'oubliez pas de rejoindre une équipe !"})
+                this.createAlertPane({"title": "Identifié !", "type": "success", "content": "Bienvenue CTF OTERIA - M1 2025. N'oubliez pas de rejoindre une équipe !"})
                 location.reload();
               } else if (error.includes(' ')) {
                 this.closePanes('login')
-                this.createAlertPane({"title": "Identifié !", "type": "success", "content": "Bienvenue à l'Oteria Cyber Cup 2024."})
+                this.createAlertPane({"title": "Identifié !", "type": "success", "content": "Bienvenue CTF OTERIA - M1 2025."})
                 location.reload();
               } else if (!!error) {
                 this.createAlertPane({"title": 'Erreur', "content": error});
@@ -3051,7 +3024,7 @@
                 if (statusCode === 403) {
                   this.createAlertPane({"title": "Registration Error","content": "L'enregistrement a expiré... Retentez !"});
                 } else {
-                  this.createAlertPane({"title": "Registration Success", "type": "success", "content": "Bienvenue à l'Oteria Cyber Cup 2024!"})
+                  this.createAlertPane({"title": "Registration Success", "type": "success", "content": "Bienvenue CTF OTERIA - M1 2025!"})
                 }
                 location.reload();
               } else if (!!error) {
