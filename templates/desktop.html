@@ -912,7 +912,7 @@
               `;
               this.createPane({
                 name: "login",
-                title: "Bienvenue au CTF OTERIA - M1 2025",
+                title: "Bienvenue au CTF",
                 recreate: `createLoginPane`,
                 taskbar_title: "Log In",
                 initial_body_elem: elem,
@@ -929,7 +929,7 @@
             createInfoPane(params) {
               const elem = `
               <div class="d-flex flex-column h-100 w-100 overflow-hidden" x-data="{selected: 'about'}">
-                <h5>Bienvenue au <b>CTF OTERIA - M1 2025</b></h5>
+                <h5>Bienvenue au <b>CTF</b></h5>
                 <div class="d-flex flex-row w-100 mt-3" style="height: calc(100% - 2.75rem);">
                   <div class="info-panel d-flex flex-column flex-grow-1 p-3 overflow-auto">
                     <template x-if="selected == 'about'">
@@ -945,9 +945,6 @@
                     </template>
                     <template x-if="selected == 'when'">
                       <div>
-                        <p>
-                          Le CTF OTERIA - M1 2025 se tiendra le Vendredi 26 Septembre 2025, 10:00 — Vendredi 26 Septembre 2025, 17:00.
-                        </p>
                         <!-- https://codepen.io/harsh/pen/KKdEVPV -->
                         <div x-data="timer()">
                           <h1 x-text="\`\${time().days}d:\${time().hours}h:\${time().minutes}m:\${time().seconds}s\`"></h1>
@@ -1024,13 +1021,13 @@
             createSpnsorPane(params) {
               const elem = `
               <div class="d-flex flex-column h-100 w-100 overflow-hidden" x-data="{selected: 'sponsors'}">
-                <h5>Bienvenue au <b>CTF OTERIA - M1 2025</b></h5>
+                <h5>Bienvenue au <b>CTF</b></h5>
                 <div class="d-flex flex-row w-100 mt-3" style="height: calc(100% - 2.75rem);">
                   <div class="info-panel d-flex flex-column flex-grow-1 p-3 overflow-auto">
                     <template x-if="selected == 'sponsors'">
                       <div class="text-center">
                         <p>
-                          L'évènement CTF OTERIA - M1 2025 remercie ses Sponsors:
+                          L'évènement CTF remercie les écoles !
                         </p>
                       </div>
                     </template>
@@ -1135,7 +1132,7 @@
 
               this.createPane({
                 name: "register",
-                title: "S'enregistrer au CTF OTERIA - M1 2025",
+                title: "S'enregistrer au CTF",
                 taskbar_title: "Register",
                 recreate: `createRegisterPane`,
                 initial_body_elem: elem,
@@ -2970,16 +2967,16 @@
                 if (statusCode === 403) {
                   this.createAlertPane({"title": "Erreur", "content": "Votre session a expiré."});
                 } else {
-                  this.createAlertPane({"title": "Identifié !", "type": "success", "content": "Bienvenue CTF OTERIA - M1 2025."})
+                  this.createAlertPane({"title": "Identifié !", "type": "success", "content": "Bienvenue CTF."})
                 }
                 location.reload();
               } else if (error.includes('participer')) {
                 this.closePanes('login')
-                this.createAlertPane({"title": "Identifié !", "type": "success", "content": "Bienvenue CTF OTERIA - M1 2025. N'oubliez pas de rejoindre une équipe !"})
+                this.createAlertPane({"title": "Identifié !", "type": "success", "content": "Bienvenue CTF. N'oubliez pas de rejoindre une équipe !"})
                 location.reload();
               } else if (error.includes(' ')) {
                 this.closePanes('login')
-                this.createAlertPane({"title": "Identifié !", "type": "success", "content": "Bienvenue CTF OTERIA - M1 2025."})
+                this.createAlertPane({"title": "Identifié !", "type": "success", "content": "Bienvenue CTF."})
                 location.reload();
               } else if (!!error) {
                 this.createAlertPane({"title": 'Erreur', "content": error});
@@ -3024,7 +3021,7 @@
                 if (statusCode === 403) {
                   this.createAlertPane({"title": "Registration Error","content": "L'enregistrement a expiré... Retentez !"});
                 } else {
-                  this.createAlertPane({"title": "Registration Success", "type": "success", "content": "Bienvenue CTF OTERIA - M1 2025!"})
+                  this.createAlertPane({"title": "Registration Success", "type": "success", "content": "Bienvenue !"})
                 }
                 location.reload();
               } else if (!!error) {
