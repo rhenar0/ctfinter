@@ -721,8 +721,8 @@
               this.restore();
               const firstLoad = localStorage.getItem(`desktop-${this.id}`) === null;
               if (firstLoad) {
-                this.createInfoPane()
-                this.createSpnsorPane()
+                //this.createInfoPane()
+                //this.createSpnsorPane()
               }
             }
 
@@ -938,7 +938,6 @@
                           <img src="/themes/uiuctf-2023-ctfd-theme/static/img/win98-icons/tip.png" alt="">
                           <p class="font-weight-bold ml-2 mt-2">Le saviez vous ?...</p>
                         </div>
-                        <p>Nous avons un <a href="https://discord.gg/ne3uyWkFmc" target="_blank" rel="noopener noreferrer"> Discord !</a></p>
                         <p>Cliquez sur Démarrer > S'identifier... pour commencer le CTF.</p>
                         <p>Si vous avez du mal avec ce thème, vous pouvez utiliser le thème par défaut <a href="/challenges" target="_blank" rel="noopener noreferrer">ici</a>.</p>
                       </div>
@@ -969,7 +968,8 @@
                             style="display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(64px, 96px));"
                             x-data="{people: [
                               { name:'Rhenar (Hugo)', img:'https://avatars.githubusercontent.com/u/15929760', href:'https://github.com/rhenar0' },
-                              { name:'Blusomething (Joris)', img:'https://cdn.discordapp.com/avatars/207805906161762304/efd2935819e8312735ccd2889a7aa23e?size=1024', href:'https://github.com/jorisvey' },
+                              { name:'GoldenB (Romain)', img:'https://media.licdn.com/dms/image/v2/C4E03AQHdLMBb4D0oNw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1659426915740?e=1762387200&v=beta&t=pT5YHcReU2VIBHccaBKAbwtE4zd6jB5mP4YR7OyPlvk', href:'https://www.linkedin.com/in/romain-burel/' },
+                              { name:'Félicité', img:'https://media.licdn.com/dms/image/v2/D4E03AQG3_91wgUmZ3w/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1665490880984?e=1762387200&v=beta&t=KAU5MaX_-d4UunWGq-AJCexAEkoQO4AiNw_BYBbcAoM', href:'https://www.linkedin.com/in/f%C3%A9licit%C3%A9-manin/'}
                             ]}"
                             x-init="people.sort((a, b) => 0.5 - Math.random())"
                           >
@@ -991,12 +991,6 @@
                     </button>
                     <button :class="\`btn btn-sm mb-1 btn-primary \${selected == 'when' ? 'border-dark' : ''}\`" type="button" @click="selected = 'when'">
                       <span class="btn-text">Quand</span>
-                    </button>
-                    <button :class="\`btn btn-sm mb-1 btn-primary \${selected == 'prizes' ? 'border-dark' : ''}\`" type="button" @click="selected = 'prizes'">
-                      <span class="btn-text">Prix</span>
-                    </button>
-                    <button :class="\`btn btn-sm mb-1 btn-primary \${selected == 'sponsors' ? 'border-dark' : ''}\`" type="button" @click="selected = 'sponsors'">
-                      <span class="btn-text">Sponsors</span>
                     </button>
                     <button :class="\`btn btn-sm mb-1 btn-primary \${selected == 'team' ? 'border-dark' : ''}\`" type="button" @click="selected = 'team'">
                       <span class="btn-text">Equipe</span>
